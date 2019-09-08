@@ -25,18 +25,20 @@ function filterPhrase(string, phrase) {
 
   let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) != index)
 
-  if (findDuplicates(wholePhrase1).length >= phraseArray1.length) {
+  if (findDuplicates(wholePhrase1).length >= phraseArray1.length && findDuplicates(wholePhrase2).length >= phraseArray2.length) {
+    return `${phrase[1]}. ${phrase[0]}`
+  } else if (findDuplicates(wholePhrase1).length >= phraseArray1.length) {
     return phrase[0]
-  } else
-    if (findDuplicates(wholePhrase2).length >= phraseArray2.length) {
-      return phrase[1]
-    }
-    else {
-      return 'blank'
-    }
+  }
+  else if (findDuplicates(wholePhrase2).length >= phraseArray2.length) {
+    return phrase[1]
+  }
+  else {
+    return 'blank'
+  }
 }
 
-let stringArray = ['kiss', 'me', 'did', 'you', ',']
+let stringArray = ['kiss', 'me', 'did', 'you', ',', 'elbow']
 let phraseArray = ['kiss me, elbow', 'why did you kiss me']
 
 console.log(filterPhrase(stringArray, phraseArray))

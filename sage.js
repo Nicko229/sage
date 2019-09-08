@@ -7,8 +7,6 @@
 // Example 2: ['kiss me, elbow', 'why did you kiss me'] ['kiss', 'me', 'did', 'you', ',']
 // The answer would be: ''
 
-// concatinate .concat both arrays and check if the same word appears twice
-
 
 function filterPhrase(string, phrase) {
 
@@ -27,14 +25,15 @@ function filterPhrase(string, phrase) {
 
   let findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) != index)
 
-  if ((wholePhrase1.length - findDuplicates(wholePhrase1).length) / 2 >= phraseArray1.length) {
+  if (findDuplicates(wholePhrase1).length >= phraseArray1.length) {
     return phrase[0]
-  } else if (((wholePhrase2.length - findDuplicates(wholePhrase2).length) / 2 >= phraseArray2.length)) {
-    return phrase[1]
-  }
-  else {
-    return 'blank'
-  }
+  } else
+    if (findDuplicates(wholePhrase2).length >= phraseArray2.length) {
+      return phrase[1]
+    }
+    else {
+      return 'blank'
+    }
 }
 
 let stringArray = ['kiss', 'me', 'did', 'you', ',']

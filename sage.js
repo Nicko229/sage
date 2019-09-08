@@ -1,13 +1,3 @@
-// Given two array of strings, the first with phrases, the second with words, we need to know what is the longest phrase that could be formed with a collection of words. 
-
-// Note: If no phrase can be formed then the method should return a blank value. Watch out for special chars (only dots, comas and semicolons are permitted).
-
-// Example 1: ['kiss me, elbow', 'why did you kiss me'] ['kiss', 'why', 'me', 'did', 'you', 'elbow', ',']
-// The answer would be: why did you kiss me
-// Example 2: ['kiss me, elbow', 'why did you kiss me'] ['kiss', 'me', 'did', 'you', ',']
-// The answer would be: ''
-
-
 function filterPhrase(string, phrase) {
 
   let phrase1 = phrase[0].match(/\w+|\s+|[^\s\w]+/g)

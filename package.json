@@ -1,0 +1,22 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "sage",
+  "main": "sage.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicko229/sage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicko229/sage/issues"
+  },
+  "homepage": "https://github.com/Nicko229/sage#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}

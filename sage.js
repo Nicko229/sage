@@ -29,16 +29,17 @@ function filterPhrase(string, phrase) {
     return `${phrase[1]}. ${phrase[0]}`
   } else if (findDuplicates(wholePhrase1).length >= phraseArray1.length) {
     return phrase[0]
-  }
-  else if (findDuplicates(wholePhrase2).length >= phraseArray2.length) {
+  } else if (findDuplicates(wholePhrase2).length >= phraseArray2.length) {
     return phrase[1]
   }
   else {
-    return 'blank'
+    return ' '
   }
 }
 
-let stringArray = ['kiss', 'me', 'did', 'you', ',', 'elbow']
+let stringArray = ['why', 'elbow', 'kiss', 'me', 'did', 'you', ',']
 let phraseArray = ['kiss me, elbow', 'why did you kiss me']
 
 console.log(filterPhrase(stringArray, phraseArray))
+
+module.exports = filterPhrase
